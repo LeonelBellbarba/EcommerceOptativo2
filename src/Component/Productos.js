@@ -28,7 +28,7 @@ function Productos(){
                     setListaProductos(answer.data.results)
                     setResponse(answer.data)
                     setLoading(false);
-                    // console.log(data)
+                    console.log(answer)
 
                 }catch(error){
                     console.log(error)

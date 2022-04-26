@@ -9,14 +9,19 @@ function App() {
     <div className="App">
 
         <Router>
-
+        {/* Cabezera */}
             <header>
                   <h1 className = "titulo">Ecommerce</h1>
                   <Menu/>
             </header>
+        {/* Fin de la Cabezera */}
 
+        {/* Routeo */}
             <Public/>
+        {/* Fin Routeo */}
 
+
+        
             <footer>Creado por Leonel Bellabarba</footer>
 
         </Router>

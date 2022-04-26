@@ -7,5 +7,5 @@ export async function getAllProducts(buscar){
 
 export async function getById(id){
     
-    return axios.get("/item/" + id)
+    return axios.get("/items/" + id)
 }

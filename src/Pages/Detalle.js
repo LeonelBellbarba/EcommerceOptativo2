@@ -22,10 +22,11 @@ function Detalle(){
        
                    const request = async ()=>{
                        try{
+                           
                            const answer = await getById(id)
                            setProductos(answer.data)
                            setLoading(false);
-                           console.log(data)
+                           console.log(answer)
        
                        }catch(error){
                            console.log(error)
@@ -34,9 +35,8 @@ function Detalle(){
                    }
        
                    request()
-               ,[id]
-            
-        }
+                   
+                },[id]
     ) 
 
 
@@ -46,7 +46,22 @@ function Detalle(){
         )
     }else{
         return(
-        <div><h1>{productos.title}</h1></div>
+        <div>
+            {/* Lista */}
+                <div className= "listaCaja">
+                    <ul>
+                        <img className ="detalleImagen" src={productos.pictures[0].url}/>
+                        <li className ="detalleTitulo"> <h1>{productos.title}</h1></li>
+                        <li className ="detallePrecio"> <h2>${productos.price}</h2></li>
+                        <li className="detalleBoton"><button>Comprar</button></li>
+                    </ul>
+                </div>
+     
+
+            
+            {/* Fin Lista */}
+
+        </div>
         )
 
     }
